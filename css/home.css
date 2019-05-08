@@ -1,0 +1,21 @@
+body
+{
+  background: greenyellow url("/img/bg.png") no-repeat center center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  margin: 0;
+}
+.wrapper
+{
+width:1200px;
+margin:0px auto;
+margin-top:20px;
+text-align: center;
+background:rgba(255,255,255,0.8);
+box-shadow: 5px 5px 5px black;
+border-radius:25px 10px;
+padding:5px;
+}
+	
