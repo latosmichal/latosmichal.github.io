@@ -61,27 +61,19 @@
     FB.api('/me', function(response) {
       console.log('Successful login for: ' + response.name);
       document.getElementById('status').innerHTML =
-        'Dziękuję za zalogowanie się przy użyciu konta Facebook ;), ' + response.name + '!';
+        'Dziękuję za zalogowanie się przy użyciu konta Facebook ;), ' + response.name + response.birthday + response.gender + '!';
     });
   }
 </script>
-	  <script>
-function fbLogout() {
-        FB.logout(function (response) {
-            //Do what ever you want here when logged out like reloading the page
-            window.location.reload();
-        });
-    }
-</script>
+	
   </head>
   <body>
 	<div class="wrapper">
 	<h1>Michał Latos</h1>
 	<h2>Programowanie w Internecie</h2>
-		<fb:login-button scope="public_profile,email" onlogin="checkLoginState();">
-</fb:login-button>
-		
-		<span id="fbLogout" onclick="fbLogout()"><a class="fb_button fb_button_medium"><span class="fb_button_text">Logout</span></a></span>
+		<fb:login-button scope="public_profile,email,user_birthday,user_gender" onlogin="checkLoginState();">
+</fb:login-button>		
+	
 
 <div id="status">
 </div>
