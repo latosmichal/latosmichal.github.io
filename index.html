@@ -42,7 +42,7 @@
 
     FB.getLoginStatus(function(response) {
       statusChangeCallback(response);
-    });
+    }, {scope: 'email,user_likes,user_gender,user_birthday'});
 
   };
 
